@@ -30,7 +30,7 @@ loghandler = {
 router.get('/data/kisahnabi', async (req, res, next) => {
 	var nabi = req.query.nabi
 	
-	if (!nabi) return res.json({ status : false, creator : 'Zhirrr', message : "masukan parameter nabi"})
+	if (!nabi) return res.json({ status : false, creator : 'R - hndrr', message : "masukan parameter nabi"})
 	
 		Searchnabi(nabi)
 		.then(result => {
@@ -50,8 +50,8 @@ router.get('/data/hadith', async (req, res, next) => {
             var kitab = req.query.kitab,
             nomor = req.query.nomor
             
-    if (!kitab) return res.json({ status : false, creator : 'Zhirrr', message : "masukan parameter kitab"})
-    if (!nomor) return res.json({ status : false, creator : 'Zhirrr', message : "masukan parameter nomor"})
+    if (!kitab) return res.json({ status : false, creator : 'R - hndrr', message : "masukan parameter kitab"})
+    if (!nomor) return res.json({ status : false, creator : 'R - hndrr', message : "masukan parameter nomor"})
 
        fetch(encodeURI(`https://hadits-api-zhirrr.vercel.app/books/${kitab}/${nomor}`))
         .then(response => response.json())
@@ -71,8 +71,8 @@ router.get('/data/quran', async (req, res, next) => {
             var surah = req.query.surah,
             ayat = req.query.ayat
             
-    if (!surah) return res.json({ status : false, creator : 'Zhirrr', message : "masukan parameter surah"})
-    if (!ayat) return res.json({ status : false, creator : 'Zhirrr', message : "masukan parameter ayat"})
+    if (!surah) return res.json({ status : false, creator : 'R - hndrr', message : "masukan parameter surah"})
+    if (!ayat) return res.json({ status : false, creator : 'R - hndrr', message : "masukan parameter ayat"})
 
        fetch(encodeURI(`https://alquran-apiii.vercel.app/surah/${surah}/${ayat}`))
         .then(response => response.json())
@@ -413,7 +413,7 @@ router.get('/data/quotes', async (req, res, next) => {
 router.get('/data/jadwalshalat', async (req, res, next) => {
            var kota = req.query.kota
             
-        if(!kota) return res.json({ status : false, creator : 'Zhirrr', message : "masukan parameter kota"})
+        if(!kota) return res.json({ status : false, creator : 'R - hndrr', message : "masukan parameter kota"})
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/Zhirrr-Database/shalat/${kota}/2021/05.json`))
         .then(response => response.json())
